@@ -2,21 +2,21 @@
 public class Print {
 
     // Задание №1
-    public static void printTreeWords() {
+    public static void printThreeWords() {
         System.out.println("Orange");
         System.out.println("Banana");
         System.out.println("Apple");
     }
 
     // Задание №2
-    public static void checkSumSing() {
+    public static void checkSumSign() {
         int a = 23;
         int b = -230;
         int sum = a + b;
         if (sum >= 0) {
-            System.out.println("Сумма положительня");
+            System.out.println("Сумма положительная");
         } else {
-            System.out.println("Сумма отрицательня");
+            System.out.println("Сумма отрицательная");
         }
     }
 
