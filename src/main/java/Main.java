@@ -12,7 +12,7 @@ public class Main {
         arrayFilling();
         multiplicationOfElements();
         matrixDiagonalFilling();
-        System.out.println("Ответ на задание №10 " + Arrays.toString(arrayOutput(15, 5)));
+        System.out.println("Ответ на задание №10 " + Arrays.toString(arrayOutPut(15, 5)));
     }
 
     // Задание №1
@@ -115,7 +115,7 @@ public class Main {
     }
 
     //Задание №10
-    public static int[] arrayOutput(int len, int initialValue) {
+    public static int[] arrayOutPut(int len, int initialValue) {
         int[] array = new int[len];
         Arrays.fill(array, initialValue);
         return array;
