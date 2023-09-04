@@ -1,123 +1,22 @@
-import java.util.Arrays;
-import java.util.Scanner;
-
 public class Main {
+
     public static void main(String[] args) {
-        System.out.println("Ответ на задание №1 " + sumOfTwoNumbers(13, 4));
-        positiveOrNegativeNumber(0);
-        System.out.println("Ответ на задание №3 " + numberCheck(-3));
-        linePrinting("Привет, как дела?", 5);
-        System.out.println("Ответ на задание №5 " + definitionOfTheYear());
-        arrayChange();
-        arrayFilling();
-        multiplicationOfElements();
-        matrixDiagonalFilling();
-        System.out.println("Ответ на задание №10 " + Arrays.toString(arrayOutPut(15, 5)));
+        Сollaborator.Сollaborator1.infoСollaborator();
+        searchByOld();
     }
 
-    // Задание №1
-    public static boolean sumOfTwoNumbers(int a, int b) {
+    public static void searchByOld() {
+        Сollaborator[] collaboratorArray = new Сollaborator[5];
+        collaboratorArray[0] = new Сollaborator("Куц Михаил Александрович", "Тестировщик", "mahael@gmail.com", 88005553535L, 45445, 27);
+        collaboratorArray[1] = new Сollaborator("Иванов Иван Иванович", "Ученый", "scientis@gmail.com", 89543533545L, 66666, 40);
+        collaboratorArray[2] = new Сollaborator("Сергеев Сергей Сергеевич", "Дизайнер", "design@gmail.com", 89678649863L, 77777, 57);
+        collaboratorArray[3] = new Сollaborator("Любочина Любовь Львовна", "Менеджер", "manager@gmail.com", 86788763223L, 88888, 19);
+        collaboratorArray[4] = new Сollaborator("Ахалаев Ахалай Ахалаевич", "Айти Лид", "itlid@gmail.com", 89877896565L, 99999, 30);
 
-        int sum = a + b;
-        return sum >= 10 && sum <= 20;
-    }
-
-    // Задание №2
-    public static void positiveOrNegativeNumber(int a) {
-        System.out.print("Ответ на задание №2 ");
-        if (a >= 0) {
-            System.out.println("Положительное");
-        } else {
-            System.out.println("Отрицательное");
-        }
-    }
-
-    // Задание №3
-    public static boolean numberCheck(int a) {
-        return a < 0;
-    }
-
-    // Задание №4
-    public static void linePrinting(String a, int b) {
-        int i = 0;
-        System.out.println("Ответ на задание №4 ");
-        while (i < b) {
-            System.out.println(a);
-            i++;
-        }
-    }
-
-    //Задание №5
-    public static boolean definitionOfTheYear() {
-        int year;
-        Scanner input = new Scanner(System.in);
-
-        System.out.print("Введите год: ");
-        year = input.nextInt();
-        if ((year % 100 == 0) && (year % 400 == 0)) {
-            return true;
-        }
-        if ((year % 100 == 0) && (year % 400 != 0)) {
-            return false;
-        }
-        return year % 4 == 0;
-    }
-
-    //Задание №6
-    public static void arrayChange() {
-        int[] array = new int[]{1, 1, 0, 0, 1, 0, 1, 1, 0, 0};
-
-        for (int i = 0; i < array.length; i++) {
-        /*   switch (array[i]){             //Вариант решения 1
-               case 0:
-                   array[i]=1; break;
-               case 1:
-                   array[i]=0; break;
-            if(array[i]  % 2 != 0 ){        //Вариант решения 2
-                array[i] = 0;
-           } else{
-                array[i] = 1;
-            } */
-            array[i] = (array[i] + 1) % 2;  //Вариант решения 3
-        }
-        System.out.println("Ответ на задание №6 " + Arrays.toString(array));
-    }
-
-    //Задание №7
-    public static void arrayFilling() {
-        int[] array = new int[100];
-        for (int i = 0; i < array.length; i++) {
-            array[i] = i + 1;
-        }
-        System.out.println("Ответ на задание №7 " + Arrays.toString(array));
-    }
-
-    //Задание №8
-    public static void multiplicationOfElements() {
-        int[] array = new int[]{1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1};
-        for (int i = 0; i < array.length; i++) {
-            if (array[i] < 6) {
-                array[i] = array[i] * 2;
+        for (int i = 0; i < collaboratorArray.length; i++) {
+            if (collaboratorArray[i].age >= 40) {
+                System.out.println(collaboratorArray[i]);
             }
         }
-        System.out.println("Ответ на задание №8 " + Arrays.toString(array));
-    }
-
-    //Задание №9
-    public static void matrixDiagonalFilling() {
-        int[][] array = new int[5][5];
-        for (int i = 0; i < array.length; i++) {
-            array[i][i] = 1;
-            array[i][array.length - 1 - i] = 1;
-        }
-        System.out.println("Ответ на задание №9 ");
-        Arrays.stream(array).map(Arrays::toString).forEach(System.out::println);
-    }
-
-    //Задание №10
-    public static int[] arrayOutPut(int len, int initialValue) {
-        int[] array = new int[len];
-        Arrays.fill(array, initialValue);
-        return array;
     }
 }
