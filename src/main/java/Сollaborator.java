@@ -1,5 +1,4 @@
 public class Сollaborator {
-
     public String fullName;
     public String position;
     public String email;

@@ -1,5 +1,4 @@
 public class Park {
-
     entertainment entertainmentBlockA = new entertainment("Колесо Обозрения", 20, 500);
 
     static class entertainment {
