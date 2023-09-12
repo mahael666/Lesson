@@ -3,10 +3,12 @@ package Part_1;
 public class Animal implements Run, Swim {
     static String animalName;
     public static int countAnimal = 0;
+
     public Animal(String animalName) {
         this.animalName = animalName;
         countAnimal++;
     }
+
     public static int getCountAnimal() {
         return countAnimal;
     }

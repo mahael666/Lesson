@@ -1,11 +1,13 @@
 package Part_1;
 
-public class Dog extends Animal{
+public class Dog extends Animal {
     private static int countDog = 0;
+
     public Dog(String animalName) {
         super(animalName);
         countDog++;
     }
+
     public static int getCountDog() {
         return countDog;
     }
@@ -27,4 +29,5 @@ public class Dog extends Animal{
             System.out.println(animalName + " не может плыть больше " + 10 + " м.");
         }
 
-    }}
+    }
+}

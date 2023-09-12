@@ -2,7 +2,7 @@ package Part_1;
 
 import org.jetbrains.annotations.NotNull;
 
-public class Cat extends Animal implements Eat{
+public class Cat extends Animal implements Eat {
     public boolean satiety;
     public static int countCat = 0;
 
@@ -11,9 +11,11 @@ public class Cat extends Animal implements Eat{
         satiety = false;
         countCat++;
     }
+
     public static int getCountCat() {
         return countCat;
     }
+
     @Override
     public void run(int distance) {
         if (distance <= 150) {
@@ -31,6 +33,7 @@ public class Cat extends Animal implements Eat{
             System.out.println(animalName + " не умеет плавать");
         }
     }
+
     @Override
     public void eat(int food, @NotNull Plate plate) {
         if (plate.getFood() < food) {

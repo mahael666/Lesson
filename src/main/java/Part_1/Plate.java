@@ -15,4 +15,5 @@ public class Plate {
     public void setFood(int food) {
         this.food = Math.max(this.food + food, 0);
 
-}}
+    }
+}
